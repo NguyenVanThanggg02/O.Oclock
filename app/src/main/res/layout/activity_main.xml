@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/txt_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/txt_message"
+        android:textSize="26sp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_listalarms_recylerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_message">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+<!--    <View-->
+<!--        android:id="@+id/container1"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="125dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="48dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:background="@drawable/container1"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.501"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txt_message" />-->
+
+<!--    <View-->
+<!--        android:id="@+id/container2"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:background="@drawable/container2"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/container1" />-->
+
+<!--    <View-->
+<!--        android:id="@+id/container3"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:background="@drawable/container3"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/container2" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txt_gio"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginBottom="44dp"-->
+<!--        android:gravity="top"-->
+<!--        android:text="@string/txt_gio"-->
+<!--        android:fontFamily="@font/montserrat_semibold"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="40sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/container1"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/container1" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txt_label"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:fontFamily="@font/montserrat_semibold"-->
+<!--        android:gravity="top"-->
+<!--        android:text="@string/txt_label"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="10sp"-->
+<!--        app:layout_constraintBaseline_toBaselineOf="@+id/txt_gio"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/txt_gio" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txt_lap"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="@font/montserrat_semibold"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:gravity="top"-->
+<!--        android:text="@string/txt_lap"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="15sp"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/container1"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txt_gio" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txt_gio_1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginBottom="44dp"-->
+<!--        android:fontFamily="@font/montserrat_semibold"-->
+<!--        android:gravity="top"-->
+<!--        android:text="@string/txt_gio_1"-->
+<!--        android:textSize="40sp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/container2"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/container2" />-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/txt_lap_1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:fontFamily="@font/montserrat_semibold"-->
+<!--        android:gravity="top"-->
+<!--        android:text="@string/txt_lap"-->
+<!--        android:textSize="15sp"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/container2"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txt_gio_1" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txt_label_1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:fontFamily="@font/montserrat_semibold"-->
+<!--        android:gravity="top"-->
+<!--        android:text="@string/txt_label"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="10sp"-->
+<!--        app:layout_constraintBaseline_toBaselineOf="@+id/txt_gio_1"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/txt_gio_1" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txt_gio_2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:fontFamily="@font/montserrat_semibold"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginBottom="44dp"-->
+<!--        android:gravity="top"-->
+<!--        android:text="@string/txt_gio_2"-->
+<!--        android:textSize="40sp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/container3"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/container3" />-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/txt_lap_2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:fontFamily="@font/montserrat_semibold"-->
+<!--        android:gravity="top"-->
+<!--        android:text="@string/txt_lap_1"-->
+<!--        android:textSize="15sp"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/container3"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txt_gio_2" />-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/txt_label_2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:fontFamily="@font/montserrat_semibold"-->
+<!--        android:gravity="top"-->
+<!--        android:text="@string/txt_label"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="10sp"-->
+<!--        app:layout_constraintBaseline_toBaselineOf="@+id/txt_gio_2"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/txt_gio_2" />-->
+
+
+<!--    <androidx.appcompat.widget.SwitchCompat-->
+<!--        android:id="@+id/switch1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="38dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_marginBottom="56dp"-->
+<!--        app:track="@drawable/switch_bg_custom"-->
+<!--        android:thumb="@drawable/thumb_custom"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/container1"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/container1"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/container1" />-->
+
+<!--    <androidx.appcompat.widget.SwitchCompat-->
+<!--        android:id="@+id/switch2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="38dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_marginBottom="56dp"-->
+<!--        app:track="@drawable/switch_bg_custom"-->
+<!--        android:thumb="@drawable/thumb_custom"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/container2"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/container2"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/container2" />-->
+
+<!--    <androidx.appcompat.widget.SwitchCompat-->
+<!--        android:id="@+id/switch3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="38dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_marginBottom="56dp"-->
+<!--        app:track="@drawable/switch_bg_custom"-->
+<!--        android:thumb="@drawable/thumb_custom"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/container3"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/container3"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/container3" />-->
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/black"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_navigation" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="#FF9633"
+        app:srcCompat="@drawable/ic_add_new_alarm"
+        android:onClick="addNewAlarm"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

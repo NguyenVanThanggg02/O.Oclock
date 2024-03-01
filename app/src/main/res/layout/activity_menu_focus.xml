@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MenuFocus">
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/black"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_navigation" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.211"
+        app:srcCompat="@drawable/ic_focus" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/linhvat_focus" />
+
+    <ViewFlipper
+        android:id="@+id/viewflipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_timer"
+        android:layout_marginBottom="10dp"
+        tools:layout_editor_absoluteY="555dp">
+
+        <TextView
+            android:id="@+id/time_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="25:00"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textSize="70sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+
+
+        <TextView
+            android:id="@+id/time_25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="30:00"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textSize="70sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+
+
+        <TextView
+            android:id="@+id/time_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="45:00"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textSize="70sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+    </ViewFlipper>
+    <View
+        android:id="@+id/back_flipper"
+        android:layout_width="20dp"
+        android:layout_height="22dp"
+        android:onClick="flipper"
+        android:background="@drawable/ic_left_flipper"
+        android:layout_marginEnd="-40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewflipper"
+        app:layout_constraintEnd_toStartOf="@id/viewflipper"
+        app:layout_constraintTop_toTopOf="@+id/viewflipper" />
+
+    <View
+        android:id="@+id/forward_flipper"
+        android:layout_width="20dp"
+        android:layout_height="22dp"
+        android:onClick="flipper"
+        android:layout_marginStart="-40dp"
+        android:background="@drawable/ic_right_flipper"
+        app:layout_constraintBottom_toBottomOf="@+id/viewflipper"
+        app:layout_constraintStart_toEndOf="@+id/viewflipper"
+        app:layout_constraintTop_toTopOf="@+id/viewflipper" />
+
+    <Button
+        android:id="@+id/btn_timer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/btn"
+        android:fontFamily="@font/montserrat_bold"
+        android:padding="4dp"
+        android:text="@string/lbl_tb"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

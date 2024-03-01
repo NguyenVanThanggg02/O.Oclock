@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_alarm"
+        android:title="Alarm"
+        android:icon="@drawable/ic_alarm_1"/>
+
+    <item
+        android:id="@+id/menu_clock"
+        android:title="Clock"
+        android:icon="@drawable/ic_clock_1"/>
+
+    <item
+        android:id="@+id/menu_focus"
+        android:title="Focus"
+        android:icon="@drawable/ic_focus_1"/>
+
+    <item
+        android:id="@+id/menu_stopwatch"
+        android:title="StopWatch"
+        android:icon="@drawable/ic_stopwatch_1"/>
+
+    <item
+        android:id="@+id/menu_more"
+        android:title="More..."
+        android:icon="@drawable/ic_settings_1"/>
+</menu>

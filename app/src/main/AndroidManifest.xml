@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ooclock">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <application
+        android:name=".application.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_app"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_app_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OOclock">
+        <activity
+            android:name=".OtherOptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TurnOffAlarm"
+            android:exported="false" />
+        <activity
+            android:name=".StartScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MenuFocusBreakTime"
+            android:exported="false" />
+        <activity
+            android:name=".MenuFocusTiming"
+            android:exported="false" />
+        <activity
+            android:name=".WayTurnOffActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TurnOffAlarmMath"
+            android:exported="false" />
+        <activity
+            android:name=".MenuFocusGiveup"
+            android:exported="false" />
+        <activity
+            android:name=".CreateAlarm"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MenuSettingsInfo"
+            android:exported="false" />
+        <activity
+            android:name=".MenuSettings"
+            android:exported="false" />
+        <activity
+            android:name=".MenuStopWatch"
+            android:exported="false" />
+        <activity
+            android:name=".MenuFocus"
+            android:exported="false" />
+        <activity
+            android:name=".MenuClock"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name=".broadcastreceiver.AlarmBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcastreceiver.NotiBroadcastReceiver"
+            android:enabled="true" />
+
+        <service
+            android:name=".service.AlarmService"
+            android:enabled="true" />
+        <service
+            android:name=".service.AlarmNotificationService"
+            android:enabled="true" />
+        <service android:name=".service.RescheduleAlarmsService" />
+    </application>
+
+</manifest>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".WayTurnOffActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_option_1"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/black"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Cách tắt báo thức"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/ic_left_flipper"
+        android:onClick="back"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_option_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_option_1" />
+
+    <RelativeLayout
+        android:id="@+id/layout_radio_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_option_1">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/radio_bell"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:background="@drawable/radio_selector_3"
+                android:button="@android:color/transparent"
+                android:onClick="optionCheck"/>
+
+            <Space
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/radio_math"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:background="@drawable/radio_selector_4"
+                android:button="@android:color/transparent"
+                android:onClick="optionCheck"/>
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/math_option"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_radio_button"
+        app:layout_constraintVertical_bias="1.0">
+
+<!--        <View-->
+<!--            android:id="@+id/container"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:background="@drawable/button"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:fontFamily="@font/montserrat_regular"-->
+<!--            android:text="Chọn độ khó của các câu hỏi toán học bạn sẽ giải quyết để loại bỏ báo thức"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="12sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/container"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/container"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/container"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/container" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txt_title_1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            android:fontFamily="@font/montserrat_semibold"-->
+<!--            android:text="Độ khó"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="20dp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/container" />-->
+
+<!--        <View-->
+<!--            android:id="@+id/container_level"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="158dp"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:background="@drawable/container_bg"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txt_title_1" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txt_level"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:fontFamily="@font/montserrat_semibold"-->
+
+<!--            android:text="@string/math_0_txt"-->
+<!--            android:textColor="@color/black"-->
+
+<!--            android:textSize="20dp"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/container_level"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/container_level"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/container_level" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txt_example"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="4dp"-->
+<!--            android:fontFamily="@font/montserrat_semibold"-->
+
+<!--            android:text="@string/math_0_exa"-->
+<!--            android:textColor="@color/black"-->
+
+<!--            android:textSize="20dp"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/container_level"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/container_level"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txt_level" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/seekBar3"-->
+<!--            style="@style/Widget.AppCompat.SeekBar.Discrete"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:thumbTint="@color/purple"-->
+<!--            android:progressTint="@color/purple"-->
+<!--            android:max="5"-->
+<!--            android:progress="0"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/container_level"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/container_level"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txt_example" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:fontFamily="@font/montserrat_regular"-->
+<!--            android:text="Dễ"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="14sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/container_level"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/container_level" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:fontFamily="@font/montserrat_regular"-->
+<!--            android:text="Khó"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="14sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/container_level"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/container_level" />-->
+
+        <TextView
+            android:id="@+id/txt_title_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Số bài toán"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/editText_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/container_bg"
+            android:hint="1"
+            android:textColorHint="@color/light_grey"
+            android:paddingStart="20dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="0dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:ems="3"
+            android:inputType="number"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title_2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="bài toán"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editText_amount"
+            app:layout_constraintStart_toEndOf="@+id/editText_amount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/ic_save"
+        android:onClick="chooseOK"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_option_1"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar_option_1"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_option_1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

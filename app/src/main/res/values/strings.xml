@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">O.OClock</string>
+    <string name="txt_message">Chuông báo thức sau 6 giờ 16 phút</string>
+    <string name="txt_gio">06:00</string>
+    <string name="txt_label">Giờ thức dậy</string>
+    <string name="txt_lap">Hằng ngày</string>
+    <string name="txt_gio_1">05:00</string>
+    <string name="txt_gio_2">05:30</string>
+    <string name="txt_lap_1">T2, T3, T4, T5, T6</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="gio_clock">09:27</string>
+    <string name="settings">More...</string>
+    <string name="txt_time_now">Thứ 7, 12/02/2024</string>
+    <string name="btn_start">Bắt đầu</string>
+    <string name="btn_reset">Đặt lại</string>
+    <string name="txt_timer">00:00:00.00</string>
+    <string name="title_activity_menu_settings_infor">MenuSettingsInfor</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lbl_information">Thông tin về ứng dụng</string>
+    <string name="lbl_thongtin">Thông tin về ứng dụng</string>
+
+    <string name="some_id">06:00 AM</string>
+    <string name="text_lap_lai">Lặp lại</string>
+    <string name="cbo_hangNgay">Hằng ngày</string>
+    <string name="t2">T2</string>
+    <string name="t3">T3</string>
+    <string name="t4">T4</string>
+    <string name="t5">T5</string>
+    <string name="t6">T6</string>
+    <string name="t7">T7</string>
+    <string name="cn">CN</string>
+    <string name="lbl_addAlarm">Thêm báo thức</string>
+    <string name="lbl_editAlarm">Sửa báo thức</string>
+    <string name="gioThucDay">Giờ thức dậy</string>
+    <string name="txt_GioThucDay">06:00</string>
+    <string name="noi_dung">Dậy tập thể dục và ăn sáng</string>
+
+    <string name="lbl_tb">Bắt đầu</string>
+    <string name="finish">Finish</string>
+    <string name="end_countdown">00:00</string>
+    <string name="stop">Dừng</string>
+    <string name="record">Bấm</string>
+    <string name="quiz_page">1/2</string>
+    <string name="computed_time">00:30</string>
+    <string name="txt_phepToan">20+30</string>
+    <string name="txt_dauBang">=\u0020</string>
+
+    <string name="math_0_txt">Rất dễ</string>
+    <string name="math_0_exa">1+1=?</string>
+    <string name="math_1_txt">Dễ</string>
+    <string name="math_1_exa">12+30=?</string>
+    <string name="math_2_txt">Vừa</string>
+    <string name="math_2_exa">22+18+37=?</string>
+    <string name="math_3_txt">Khó</string>
+    <string name="math_3_exa">(12x8)+46=?</string>
+    <string name="math_4_txt">Rất khó</string>
+    <string name="math_4_exa">39x62=?</string>
+    <string name="math_5_txt">Cực kì khó nhằn</string>
+    <string name="math_5_exa">23x47x15=?</string>
+
+    <string name="ourTeam">Nhóm thực hiện</string>
+    <string name="member1">Nguyễn Đức Đạt</string>
+    <string name="member2">Nguyễn Khắc Phong Toàn</string>
+    <string name="member3">Nguyễn Văn Thắng</string>
+    <string name="member4">Nguyễn Văn Toàn</string>
+    <string name="member5">Nguyễn Hữu Hòa</string>
+    <string name="speacialThanks">Xin chân thành cảm ơn</string>
+
+
+    <string-array name="time_array">
+        <item>25 phút</item>
+        <item>30 phút</item>
+        <item>45 phút</item>
+    </string-array>
+
+
+
+</resources>

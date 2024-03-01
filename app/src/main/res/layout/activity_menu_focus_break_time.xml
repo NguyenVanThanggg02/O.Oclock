@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MenuFocusBreakTime">
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/black"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_navigation" />
+
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="75dp"
+        android:background="@drawable/linhvat_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Bạn đã thành công, bạn hãy nghỉ ngơi một chút"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/viewflipper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+
+    <ViewFlipper
+        android:id="@+id/viewflipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_break"
+        android:layout_marginBottom="10dp"
+        tools:layout_editor_absoluteY="555dp">
+
+        <TextView
+            android:id="@+id/time_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="05:00"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textSize="70sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+
+
+        <TextView
+            android:id="@+id/time_25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10:00"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textSize="70sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+
+
+        <TextView
+            android:id="@+id/time_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15:00"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textSize="70sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+
+
+
+
+
+    </ViewFlipper>
+
+    <Button
+        android:id="@+id/btn_break"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="#FF9633"
+        android:layout_marginStart="104dp"
+        android:layout_marginEnd="104dp"
+        android:text="Nghỉ"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/montserrat_semibold"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <View
+        android:id="@+id/back_flipper"
+        android:layout_width="20dp"
+        android:layout_height="22dp"
+        android:onClick="flipper"
+        android:background="@drawable/ic_left_flipper"
+        android:layout_marginEnd="-40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewflipper"
+        app:layout_constraintEnd_toStartOf="@id/viewflipper"
+        app:layout_constraintTop_toTopOf="@+id/viewflipper" />
+
+    <View
+        android:id="@+id/forward_flipper"
+        android:layout_width="20dp"
+        android:layout_height="22dp"
+        android:onClick="flipper"
+        android:layout_marginStart="-40dp"
+        android:background="@drawable/ic_right_flipper"
+        app:layout_constraintBottom_toBottomOf="@+id/viewflipper"
+        app:layout_constraintStart_toEndOf="@+id/viewflipper"
+        app:layout_constraintTop_toTopOf="@+id/viewflipper" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
